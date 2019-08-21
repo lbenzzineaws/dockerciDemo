@@ -6,3 +6,12 @@ services:
 script:
   - docker build -t latifdev/node .
   - docker images latifdev/node
+
+before_deploy:
+  docker login -u latifdev -p Student4ever>
+
+deploy:
+  provider: script
+  script: docker push latifdev/node
+  on: 
+    branch: master
