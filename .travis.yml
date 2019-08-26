@@ -8,7 +8,7 @@ script:
   - docker images latifdev/node
 
 before_deploy:
-  docker login -u latifdev -p Student4ever?
+  docker login -u latifdev -p 
 
 deploy:
   provider: script
